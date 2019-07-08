@@ -5,17 +5,17 @@ cmd中
 gdb调试命令：
 gcc 源代码 -std=c99 -g  (编译程序)
 gdb a.exe               (运行gdb调试)
-(gdb) l              (查看源码)                              list
-(gdb) b 4               (设置断点在第4行)                    break
-(gdb) cl 4              (清除断点在第4行)                    clear
-(gdb) r                 (运行程序，碰到断点并停止)           run
-(gdb) c                 (在程序中断后继续执行程序)           continue
-(gdb) n                 (执行一条语句，对函数整体处理)       next
-(gdb) s                 (执行一条语句，进入函数内部)         step
-(gdb) u                 (执行到指定行号或者指定函数的开头)   until
+(gdb) l              (查看源码)                                    list
+(gdb) b 4   (设置断点在第4行也可以 b (函数名)在函数开头设置断点)   break
+(gdb) cl 4              (清除断点在第4行)                          clear
+(gdb) r                 (运行程序，碰到断点并停止)                 run
+(gdb) c                 (在程序中断后继续执行程序)                 continue
+(gdb) n                 (执行一条语句，对函数整体处理)             next
+(gdb) s                 (执行一条语句，进入函数内部)               step
+(gdb) u                 (执行到指定行号或者指定函数的开头)         until
 (gdb) bt                (调用栈，查看栈帧)                  
-(gdb) p 变量            (打印变量的值)                       print
-(gdb) disp 表达式       (当程序每次停下来时都会显示其值)     display
+(gdb) p 变量            (打印变量的值)                             print
+(gdb) disp 表达式       (当程序每次停下来时都会显示其值)           display
 (gdb) up                (选择上一个栈帧，由0到1)
 (gdb) q                 (退出gdb)                          
-(gdb) i                 (显示各种信息，如 i b显示所有断点)   info
+(gdb) i                 (显示各种信息，如 i b显示所有断点)         info
