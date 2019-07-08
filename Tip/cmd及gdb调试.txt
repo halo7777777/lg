@@ -17,5 +17,5 @@ gdb a.exe               (运行gdb调试)
 (gdb) p 变量            (打印变量的值)                             print
 (gdb) disp 表达式       (当程序每次停下来时都会显示其值)           display
 (gdb) up                (选择上一个栈帧，由0到1)
-(gdb) q                 (退出gdb)                          
+(gdb) q                 (退出gdb)                                  quit
 (gdb) i                 (显示各种信息，如 i b显示所有断点)         info
