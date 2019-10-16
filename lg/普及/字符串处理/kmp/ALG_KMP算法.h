@@ -4,6 +4,8 @@
 
 
 //getNext求解长度为len的字符串s的next数组
+int next[100000] = {0};
+int nextval[100000] = {0};
 void getNext(char s[], int len)
 {
     int j = -1;
@@ -48,17 +50,19 @@ void getNextval(char s[], int len)
     }
 }
 
+
 //统计pattern在text中出现的次数
 int KMP(char text[], char pattern[])
 {
     int n = strlen(text), m = strlen(pattern);
-    getNext(pattern, m);
+
+    getNextval(pattern, m);
     int ans = 0, j = -1;
     for(int i = 0; i < n; i++)
     {
         while(j != -1 && text[i] != pattern[j + 1])
         {
-            j = next[j];
+            j = nextval[j];
         }
         if(text[i] == pattern[j + 1])
         {
@@ -67,7 +71,7 @@ int KMP(char text[], char pattern[])
         if(j == m - 1)
         {
             ans++;
-            j = next[j];
+            j = nextval[j];
         }
     }
     return ans;
