@@ -1,4 +1,5 @@
 //队列方法
+//遍历完一个数后，将其从队头pop出，再push进队尾，模拟循环队列
 #include<bits/stdc++.h>
 using namespace std;
 int main()
