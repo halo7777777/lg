@@ -1,3 +1,4 @@
+//回溯打表
 #include<bits/stdc++.h>
 using namespace std;
 int flag[3][1000] = {0};
