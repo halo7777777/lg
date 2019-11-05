@@ -8,7 +8,7 @@ struct stick{
     int L;
     int W;
 };
-bool cmp1(stick a, stick b)
+bool cmp(stick a, stick b)
 {
     if(a.L == b.L)
         return a.W > b.W;
@@ -30,7 +30,7 @@ int main()
     {
         scanf("%d%d",&a[i].L,&a[i].W);
     }
-
+    sort(a,a+n,cmp);
     for(int i = 0; i < n; i++)         //双重循环贪心遍历
     {
         if(!used[i])
